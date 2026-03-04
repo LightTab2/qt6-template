@@ -62,7 +62,7 @@ cmake . -G Ninja -B build -DCMAKE_TOOLCHAIN_FILE=conan/conan_toolchain.cmake -DC
 ```
 
 ```bash
-cmake . -G "Visual Studio 18 2026" -T v145 -B build -A x64 -DCMAKE_TOOLCHAIN_FILE=.
+cmake . -G "Visual Studio 17 2022" -T v143 -B build -A x64 -DCMAKE_TOOLCHAIN_FILE=conan/conan_toolchain.cmake
 ```
 
 <hr>
@@ -97,13 +97,13 @@ If you did not tinker with *Conan*, the **toolchain file** should be found at `c
 You can use your local *IDE* or *CMake* again:
 
 ```bash
-cmake --build [pathToBuiltProject] --config [configuration] -j4 -DCMAKE_TOOLCHAIN_FILE=[pathToConanToolchainFile]
+cmake --build [pathToBuiltProject] --config [configuration] -j4
 ```
 
 Example:
 
 ```bash
-cmake --build build --config release -j4 -DCMAKE_TOOLCHAIN_FILE=conan/conan_toolchain.cmake
+cmake --build build --config release -j4
 ```
 
 ## Features
